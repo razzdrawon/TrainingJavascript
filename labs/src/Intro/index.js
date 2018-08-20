@@ -4,10 +4,12 @@ document.getElementById("main").innerHTML = "Hello world";
 let min = 1;
 let max = 10;
 let random = Math.floor(Math.random() * (max - min + 1)) + min;
+console.log('The random number: ' + random);
 
 let str = '';
 for (let index = 1; index <= random; index++) {
 
+    console.log('This is the index: ' + index);
     switch (index) {
         case 1:
             str += 'fun' + ' ';

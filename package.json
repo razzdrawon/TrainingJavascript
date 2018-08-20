@@ -1,0 +1,29 @@
+{
+  "name": "tooling-lab",
+  "version": "1.0.0",
+  "description": "tooling lab from the course. (Babe, ESLint, Webpack, NPM)",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/razzdrawon/TrainingJavascript.git"
+  },
+  "keywords": [
+    "NPM",
+    "babel",
+    "esLint",
+    "WebPack"
+  ],
+  "author": "Ricardo Padilla, José Pliego",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/razzdrawon/TrainingJavascript/issues"
+  },
+  "homepage": "https://github.com/razzdrawon/TrainingJavascript#readme",
+  "devDependencies": {
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0"
+  }
+}

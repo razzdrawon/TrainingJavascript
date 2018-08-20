@@ -1,7 +1,8 @@
 module.exports = {
     "env": {
         "browser": true,
-        "es6": true
+        "es6": true,
+        "commonjs": true
     },
     "extends": "eslint:recommended",
     "parserOptions": {
@@ -175,6 +176,7 @@ module.exports = {
         "no-trailing-spaces": "error",
         "no-undef-init": "error",
         "no-undefined": "error",
+        "no-undef": "error",
         "no-underscore-dangle": "error",
         "no-unmodified-loop-condition": "error",
         "no-unneeded-ternary": "error",
@@ -215,7 +217,7 @@ module.exports = {
         "prefer-rest-params": "error",
         "prefer-spread": "error",
         "prefer-template": "off",
-        "quote-props": "error",
+        "quote-props": "off",
         "quotes": "off",
         "radix": "error",
         "require-atomic-updates": "error",
@@ -235,9 +237,9 @@ module.exports = {
             "error",
             "last"
         ],
-        "sort-imports": "error",
-        "sort-keys": "error",
-        "sort-vars": "error",
+        "sort-imports": "warn",
+        "sort-keys": "warn",
+        "sort-vars": "warn",
         "space-before-blocks": "error",
         "space-before-function-paren": "error",
         "space-in-parens": [

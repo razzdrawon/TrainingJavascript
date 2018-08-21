@@ -4,7 +4,8 @@
   "description": "tooling lab from the course. (Babe, ESLint, Webpack, NPM)",
   "main": "index.js",
   "scripts": {
-    "test": "jasmine"
+    "test": "jasmine",
+    "build": "eslint ./labs/src/intro/ --ext .js && webpack"
   },
   "repository": {
     "type": "git",

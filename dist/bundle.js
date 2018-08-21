@@ -94,7 +94,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nvar getBrowserInfo = function getBrowserInfo() {\n  var cssClass = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : \"\";\n\n  var html = \"<ul class=\\\"\" + cssClass + \"\\\">\";\n  for (var prop in navigator) {\n    try {\n      html += \"<li>\" + prop + \"=\" + navigator[prop] + \"</li>\";\n    } catch (e) {\n      console.error(e);\n    }\n  }\n  html += \"</ul>\";\n  return html;\n};\nexports.default = getBrowserInfo;\n\n//# sourceURL=webpack:///./labs/src/intro/getBrowserInfo.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n/* eslint guard-for-in:off */\nvar getBrowserInfo = function getBrowserInfo() {\n  var cssClass = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : \"\";\n\n  var html = \"<ul class=\\\"\" + cssClass + \"\\\">\";\n  for (var prop in navigator) {\n    try {\n      html += \"<li>\" + prop + \"=\" + navigator[prop] + \"</li>\";\n    } catch (error) {\n      console.error(error);\n    }\n  }\n  html += \"</ul>\";\n\n  return html;\n};\nexports.default = getBrowserInfo;\n\n//# sourceURL=webpack:///./labs/src/intro/getBrowserInfo.js?");
 
 /***/ }),
 

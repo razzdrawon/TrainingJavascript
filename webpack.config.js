@@ -7,6 +7,16 @@ module.exports = {
         path: path.resolve(__dirname, "dist"), // eslint-disable-line no-undef
         filename: "bundle.js"
     },
-    module: {rules: []},
-    plugins: [new HtmlWebpackPlugin({template: './labs/src/intro/index.html'})]
+    module: {
+        rules: [
+            {
+                test: /\.css$/,
+                use: [
+                    { loader: 'style-loader' },
+                    { loader: 'css-loader' }
+                ]
+            }
+        ]
+    },
+    plugins: [new HtmlWebpackPlugin({ template: './labs/src/intro/index.html' })]
 };

@@ -1,4 +1,5 @@
 import './site.css';
+import getBrowserInfo from './getBrowserInfo';
 
 alert("Hello world");
 document.getElementById("main").innerHTML = "Hello world";
@@ -57,3 +58,4 @@ for (let index = 1; index <= random; index++) {
 }
 
 document.getElementById("number").innerHTML = str;
+document.getElementById("main").innerHTML = getBrowserInfo();

@@ -58,4 +58,4 @@ for (let index = 1; index <= random; index++) {
 }
 
 document.getElementById("number").innerHTML = str;
-document.getElementById("main").innerHTML = getBrowserInfo();
+document.getElementById("info").innerHTML = getBrowserInfo();

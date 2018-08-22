@@ -1,5 +1,5 @@
 /* eslint no-undef:off */
-import getPeople from '../labs/src/intro/people';
+import people from '../labs/src/intro/people';
 
 describe('Arrays Testing', () => {
     it('will return true', () => {
@@ -7,9 +7,8 @@ describe('Arrays Testing', () => {
     });
 
     it('can be created', () => {
-        let peopleCopy = getPeople();
-        expect(peopleCopy.length).toEqual(5);
+        expect(people.length).toEqual(5);
     });
 });
 
-export default getPeople;
+export default people;

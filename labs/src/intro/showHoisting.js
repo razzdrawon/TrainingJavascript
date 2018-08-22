@@ -2,11 +2,15 @@
 space-before-function-paren:off, no-unused-vars:off,
 no-throw-literal:off, no-var:off, id-length:off*/
 function showHoisting() {
-    var x = 1;
+    let x = 2;
     if (x === 2) {
-        var y = true;
+        let y = true;
+        return y;
     }
-    return y;
+    else {
+        return false;
+    }
+    
 }
 
 export default showHoisting;

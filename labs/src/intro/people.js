@@ -1,3 +1,23 @@
-let people = [1, 2, 3, 4, 5];
-
+let people = [
+    {
+        first: 'Juan',
+        last: 'Valdez'
+    },
+    {
+        first: 'Pepe',
+        last: 'Nava'
+    },
+    {
+        first: 'Veronica',
+        last: 'Castro'
+    },
+    {
+        first: 'Sam',
+        last: 'Walmy'
+    },
+    {
+        first: 'Dora',
+        last: 'Esplorer'
+    }
+];
 export default people;

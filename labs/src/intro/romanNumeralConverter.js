@@ -13,6 +13,21 @@ function convert(romanNumeral) {
         case 'x':
             number = 10;
             break;
+        case 'xv':
+            number = 15;
+            break;
+        case 'l':
+            number = 50;
+            break;
+        case 'c':
+            number = 100;
+            break;
+        case 'd':
+            number = 500;
+            break;
+        case 'm':
+            number = 1000;
+            break;
         default:
             number = 0;
             break;
@@ -20,4 +35,5 @@ function convert(romanNumeral) {
 
 return number;
 }
+
 export default convert;

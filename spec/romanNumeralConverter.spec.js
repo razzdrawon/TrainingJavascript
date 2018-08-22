@@ -18,6 +18,22 @@ describe('Roman numeral converter', () => {
         let actual = convert('xv');
         expect(actual).toEqual(15);
     });
+    it('will return 50 given l', () => {
+        let actual = convert('l');
+        expect(actual).toEqual(50);
+    });
+    it('will return 100 given c', () => {
+        let actual = convert('c');
+        expect(actual).toEqual(100);
+    });
+    it('will return 500 given d', () => {
+        let actual = convert('d');
+        expect(actual).toEqual(500);
+    });
+    it('will return 1000 given m', () => {
+        let actual = convert('m');
+        expect(actual).toEqual(1000);
+    });
 });
 
 export default convert;

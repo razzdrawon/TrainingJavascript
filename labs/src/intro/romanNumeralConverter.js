@@ -2,6 +2,22 @@
 space-before-function-paren:off, no-unused-vars:off,
 no-throw-literal:off */
 function convert(romanNumeral) {
-    throw "Not yet implemented";
+    let number = null;
+    switch (romanNumeral) {
+        case 'i':
+            number = 1;
+            break;
+        case 'v':
+            number = 5;
+            break;
+        case 'x':
+            number = 10;
+            break;
+        default:
+            number = 0;
+            break;
+    }
+
+return number;
 }
 export default convert;

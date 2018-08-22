@@ -67,7 +67,7 @@ return true;
     });
 
     it('can convert your array of people into an array of strings', () => {
-        let arrayOfStrings = people.map(x => x.name = 'name: ' + x.first + ' ' +  x.last);
+        let arrayOfStrings = people.map((x) => `name: ${x.first} ${x.last}`);
         expect(arrayOfStrings[0])
             .toEqual(`name: ${people[0].first} ${people[0].last}`);
         expect(arrayOfStrings[1])

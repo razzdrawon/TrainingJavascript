@@ -1,7 +1,10 @@
 /* eslint func-style:off, require-jsdoc:off,
 space-before-function-paren:off, no-unused-vars:off,
 no-throw-literal:off */
-export function convert(romanNumeral) {
+export class RomanNumeralConverter {
+
+
+convert(romanNumeral) {
     let number = null;
     switch (romanNumeral) {
         case 'i':
@@ -33,10 +36,10 @@ export function convert(romanNumeral) {
             break;
     }
 
-return number;
+    return number;
 }
 
-export function convertToRoman(decimalNumeral) {
+convertToRoman(decimalNumeral) {
     let roman = null;
     switch (decimalNumeral) {
         case 1:
@@ -68,5 +71,7 @@ export function convertToRoman(decimalNumeral) {
             break;
     }
 
-return roman;
+    return roman;
+}
+
 }

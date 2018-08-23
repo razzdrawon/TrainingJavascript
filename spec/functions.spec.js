@@ -26,6 +26,18 @@ describe('functions', () => {
         let person = makePerson('Veronica', 'Castro', 'lavero@gmail.com', undefined);
         expect(person).toBe(JSON.stringify({firstName: 'Veronica', lastName: 'Castro', email: 'lavero@gmail.com', phone: 'no phone'}));
     });
+    it("can calculate a factorial", () => {
+        let f = factorial(10);
+        expect(f).toBe(3628800);
+    });
+    it("can calculate three factorials", () => {
+        let f = multiplefactorial(2, 3, 4);
+        expect(f).toBe(JSON.stringify([2,6,24]));
+    });
+    it("can calculate three factorials", () => {
+        let f = multiplefactorial(2, 3, 4, 10, 7, 5, 1, 6, 8, 9);
+        expect(f).toBe(JSON.stringify([2, 6, 24, 3628800, 5040, 120, 1, 720, 40320, 362880]));
+    });
 });
 
 const expression = function () {return true}
@@ -40,4 +52,20 @@ const makePerson = (name, last, email = 'no email', phone = 'no phone') => {
         return JSON.stringify(person);
     }
     throw new Error("error");
+};
+
+let factorial = (number) => {
+    if(number === 1) {
+        return 1;
+    }
+    return number * factorial(number - 1);
+};
+
+let multiplefactorial = (...numbers) => {
+    let factorials = [];
+    for(let n of numbers) {
+        factorials.push(factorial(n));
+    }
+
+    return JSON.stringify(factorials);
 };

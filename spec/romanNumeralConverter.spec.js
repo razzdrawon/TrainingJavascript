@@ -1,5 +1,5 @@
 /* eslint no-undef:off */
-import {RomanNumeralConverter} from '../labs/src/intro/romanNumeralConverter';
+import { RomanNumeralConverter } from '../labs/src/intro/romanNumeralConverter';
 
 const convertor = new RomanNumeralConverter();
 describe('Roman numeral convertor.converter', () => {
@@ -34,5 +34,15 @@ describe('Roman numeral convertor.converter', () => {
     it('will return 1000 given m', () => {
         let actual = convertor.convert('m');
         expect(actual).toEqual(1000);
+    });
+    it("should convert roman to decimal using a setter and getter", () => {
+        // const converter = new RomanNumeralConverter();
+        convertor.romanNumeral = "iii";
+        expect(convertor.decimalNumber).toEqual(3);
+    });
+    it("should convert decimal to roman using a setter and getter", () => {
+        // const converter = new RomanNumeralConverter();
+        convertor.decimalNumber = 3;
+        expect(convertor.romanNumeral).toEqual('iii');
     });
 });

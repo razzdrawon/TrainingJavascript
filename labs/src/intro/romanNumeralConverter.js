@@ -3,12 +3,45 @@ space-before-function-paren:off, no-unused-vars:off,
 no-throw-literal:off */
 export class RomanNumeralConverter {
 
+constructor (){
+    let _decimalNumber;
+    let _romanNumeral;
+}
+
+get decimalNumber() {
+    return this._decimalNumber;
+}
+
+set decimalNumber(value) {
+    this._decimalNumber = value;
+    this._romanNumeral = this.convertToRoman(value);
+}
+
+get romanNumeral() {
+    return this._romanNumeral;
+}
+
+set romanNumeral(value) {
+    this._romanNumeral = value;
+    this._decimalNumber = this.convert(value);
+}
+
+
 
 convert(romanNumeral) {
     let number = null;
     switch (romanNumeral) {
         case 'i':
             number = 1;
+            break;
+        case 'ii':
+            number = 2;
+            break;
+        case 'iii':
+            number = 3;
+            break;
+        case 'iv':
+            number = 4;
             break;
         case 'v':
             number = 5;

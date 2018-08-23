@@ -23,7 +23,8 @@ describe('functions', () => {
         expect(person).toBe(JSON.stringify({firstName: 'Veronica', lastName: 'Castro', email: 'no email', phone: '55999999'}));
     });
     it("will set phone to 'no phone' if not provided", () => {
-        return true;
+        let person = makePerson('Veronica', 'Castro', 'lavero@gmail.com', undefined);
+        expect(person).toBe(JSON.stringify({firstName: 'Veronica', lastName: 'Castro', email: 'lavero@gmail.com', phone: 'no phone'}));
     });
 });
 
@@ -33,7 +34,7 @@ function statement () {return true;}
 
 const arrow = () => true;
 
-const makePerson = (name, last, email = 'no email', phone) => {
+const makePerson = (name, last, email = 'no email', phone = 'no phone') => {
     if (name && last) {
         let person = {firstName: name, lastName: last, email: email, phone: phone};
         return JSON.stringify(person);

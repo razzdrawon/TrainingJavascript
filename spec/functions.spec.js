@@ -38,6 +38,10 @@ describe('functions', () => {
         let f = multiplefactorial(2, 3, 4, 10, 7, 5, 1, 6, 8, 9);
         expect(f).toBe(JSON.stringify([2, 6, 24, 3628800, 5040, 120, 1, 720, 40320, 362880]));
     });
+    it("will return 1 if no params", () => {
+        let f = multiplefactorial();
+        expect(f).toBe(1);
+    });
 });
 
 const expression = function () {return true}
@@ -67,5 +71,10 @@ let multiplefactorial = (...numbers) => {
         factorials.push(factorial(n));
     }
 
+    if(factorials.length < 1) {
+        return 1;
+    }
     return JSON.stringify(factorials);
+    
+    
 };

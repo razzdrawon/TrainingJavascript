@@ -1,5 +1,5 @@
 /* eslint no-undef:off */
-import convert from '../labs/src/intro/romanNumeralConverter';
+import {convert} from '../labs/src/intro/romanNumeralConverter';
 
 describe('Roman numeral converter', () => {
     it('will return 1 given i', () => {
@@ -35,5 +35,3 @@ describe('Roman numeral converter', () => {
         expect(actual).toEqual(1000);
     });
 });
-
-export default convert;

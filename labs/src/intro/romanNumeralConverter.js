@@ -1,7 +1,7 @@
 /* eslint func-style:off, require-jsdoc:off,
 space-before-function-paren:off, no-unused-vars:off,
 no-throw-literal:off */
-function convert(romanNumeral) {
+export function convert(romanNumeral) {
     let number = null;
     switch (romanNumeral) {
         case 'i':
@@ -36,4 +36,37 @@ function convert(romanNumeral) {
 return number;
 }
 
-export default convert;
+export function convertToRoman(decimalNumeral) {
+    let roman = null;
+    switch (decimalNumeral) {
+        case 1:
+            roman = 'i';
+            break;
+        case 2:
+            roman = 'ii';
+            break;
+        case 3:
+            roman = 'iii';
+            break;
+        case 4:
+            roman = 'iv';
+            break;
+        case 5:
+            roman = 'v';
+            break;
+        case 6:
+            roman = 'vi';
+            break;
+        case 7:
+            roman = 'vii';
+            break;
+        case 8:
+            roman = 'viii';
+            break;
+        default:
+            roman = '';
+            break;
+    }
+
+return roman;
+}

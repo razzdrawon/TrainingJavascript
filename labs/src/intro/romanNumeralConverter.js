@@ -1,6 +1,6 @@
 /* eslint func-style:off, require-jsdoc:off,
 space-before-function-paren:off, no-unused-vars:off,
-no-throw-literal:off */
+no-throw-literal:off, space-before-blocks:off, no-underscore-dangle:off */
 export class RomanNumeralConverter {
 
 constructor (){

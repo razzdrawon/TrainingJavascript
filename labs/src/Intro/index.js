@@ -59,54 +59,58 @@ for (let index = 1; index <= random; index++) {
 
 }
 
+
+
 function getPersons () {
+    
+    const promise = new Promise( (resolve) => {
+        // We will do async stuff here in a minute
+        setTimeout(() => {
+            console.log("finished reading persons", jsonPersons);
+            resolve(jsonPersons);
+        }, 3000);
+    } );
+
     console.log(jsonPersons);
-    setTimeout(() => {
-        console.log("finished reading persons", jsonPersons);
-        return jsonPersons;
-    }, 3000);
+    return promise;
 }
 
 let persons = [];
-persons = getPersons();
-console.log(persons);
-
-let arrayModified = persons.map(p => 
-`<section class="person-card">
-    <header>
-      <h1>
-        ${p.name.first} ${p.name.last}
-      </h1>
-    </header>
-    <div class="profile-image-div">
-      <img src="${p.picture.large}" alt="${p.name.first} ${p.name.last}" />
-    </div>
-    <div class="person-data">
-      <ul>
-        <li>
-          <span class="label">Location</span>
-          <br />${p.location.street}
-          <br />${p.location.city}, ${p.location.state} ${p.location.postcode}
-          <br />${p.location.country}</li>
-        <li>
-          <span class="label">Email:</span> ${p.email}</li>
-        <li>
-          <span class="label">Cell:</span> ${p.cell}</li>
-        <li>
-          <span class="label">Gender:</span> ${p.gender}</li>
-      </ul>
-    </div>
-    </header>
-  </section>`
+persons = getPersons().then(
+    listOfPoeple => {
+        console.log('promise resolved', listOfPoeple);
+        var personString = listOfPoeple.map(p => 
+            `<section class="person-card">
+                <header>
+                  <h1>
+                    ${p.name.first} ${p.name.last}
+                  </h1>
+                </header>
+                <div class="profile-image-div">
+                  <img src="${p.picture.large}" alt="${p.name.first} ${p.name.last}" />
+                </div>
+                <div class="person-data">
+                  <ul>
+                    <li>
+                      <span class="label">Location</span>
+                      <br />${p.location.street}
+                      <br />${p.location.city}, ${p.location.state} ${p.location.postcode}
+                      <br />${p.location.country}</li>
+                    <li>
+                      <span class="label">Email:</span> ${p.email}</li>
+                    <li>
+                      <span class="label">Cell:</span> ${p.cell}</li>
+                    <li>
+                      <span class="label">Gender:</span> ${p.gender}</li>
+                  </ul>
+                </div>
+                </header>
+              </section>`
+            ).join();
+            document.getElementById("list").innerHTML = personString;
+    }
 );
 
-console.log(arrayModified);
 
-
-let personString = arrayModified.join();
-
-console.log(personString);
-
-document.getElementById("list").innerHTML = personString;
 document.getElementById("number").innerHTML = str;
 document.getElementById("info").innerHTML = getBrowserInfo();
